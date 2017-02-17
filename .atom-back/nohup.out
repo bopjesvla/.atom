@@ -1,0 +1,19 @@
+Failed to generate minidump.Error: listen EADDRINUSE /tmp/atom-1.14.2-bderuiter.sock
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at Server._listen2 (net.js:1240:19)
+    at listen (net.js:1289:10)
+    at Server.listen (net.js:1378:5)
+    at AtomApplication.module.exports.AtomApplication.listenForArgumentsFromNewProcess (/home/bderuiter/atom/usr/share/atom/resources/app.asar/src/main-process/atom-application.js:292:14)
+    at AtomApplication.module.exports.AtomApplication.initialize (/home/bderuiter/atom/usr/share/atom/resources/app.asar/src/main-process/atom-application.js:120:12)
+    at Function.module.exports.AtomApplication.open (/home/bderuiter/atom/usr/share/atom/resources/app.asar/src/main-process/atom-application.js:59:38)
+    at App.<anonymous> (/home/bderuiter/atom/usr/share/atom/resources/app.asar/src/main-process/start.js:69:21)
+    at emitTwo (events.js:111:20)
+    at App.emit (events.js:191:7)
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '/tmp/atom-1.14.2-bderuiter.sock',
+  port: -1 }
+Failed to get crash dump id.
+Report Id: 

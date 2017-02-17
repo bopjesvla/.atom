@@ -1,0 +1,139 @@
+@import "ui-variables";
+@import "syntax-variables";
+@import "octicon-mixins";
+
+// item-indicator
+// =========================
+.narrow-ui-item-indicator-base () {
+  // .octicon(arrow-right, 1em);
+  // .octicon(playback-play, 1em);
+  // .octicon(playback-fast-forward, 1em);
+  // .octicon(mirror-private);
+  // .octicon(check, 1em);
+  // .octicon(dash, 1em);
+  .octicon(chevron-right, 1em);
+  padding: 0 .4em;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+atom-text-editor .narrow-ui-item-indicator {
+  .narrow-ui-item-indicator-base();
+  color: @syntax-color-added;
+}
+
+atom-text-editor .narrow-ui-item-indicator-protected {
+  .narrow-ui-item-indicator-base();
+  color: @syntax-color-modified;
+}
+
+// row-marker
+// =========================
+@row-marker-color: fadeout(lighten(@syntax-color-added, 0%), 20%);
+
+atom-text-editor {
+  .line.narrow-result {
+    box-shadow:0 -7px 0 -6px @row-marker-color inset;
+  }
+}
+
+// row-marker
+// =========================
+atom-text-editor {
+  .narrow-match {
+    .region {
+      box-sizing: border-box;
+      border-radius: @component-border-radius;
+
+      background-color: @syntax-result-marker-color;
+      border: 2px solid transparent;
+      transition: border-color .2s;
+    }
+    &.current .region {
+      border-color: @syntax-result-marker-color-selected;
+      transition-duration: .1s;
+    }
+  }
+}
+
+// search min editor
+// =========================
+.narrow-search-container {
+  display: flex;
+  padding: @component-padding/2 @component-padding;
+  border: none;
+  #narrow-search-input {
+    width: 100%;
+  }
+}
+
+atom-text-editor.narrow-editor {
+  // Hide linumber gutter but still shows icon to fold/un-fold.
+  // https://discuss.atom.io/t/use-the-gutter-without-enabling-linenumbers/2461/16
+  .gutter {
+    .line-numbers {
+      text-indent: 999em;
+      width: 23px;
+      overflow: hidden;
+      position: relative;
+      .icon-right {
+        position: absolute;
+        left: 0;
+        text-indent: 0;
+      }
+    }
+  }
+  // block-cursor on read-only mode
+  &.read-only {
+    &.is-focused {
+      .cursor {
+        border: none;
+        background: none;
+        opacity: 0.5;
+        background-color: @syntax-cursor-color;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+// Hover Counter
+// =========================
+.narrow-provider-panel {
+  padding: @component-padding/3 @component-padding;
+  color: @text-color-subtle;
+  font-size: 0.9em;
+  div {
+    display: inline-block;
+  }
+  span {
+    display: inline-block;
+  }
+  .icon {
+    vertical-align: middle;
+  }
+  .base {
+    .provider-name {
+      color: @text-color-success;
+      font-size: 1.0em;
+    }
+    .item-counter {
+      min-width: 20px;
+      text-align: right;
+      color: @text-color-warning;
+    }
+  }
+  .search-options {
+    .loading {
+      .hide {
+        display: none;
+      }
+    }
+    .search-term {
+      color: @text-color-info;
+    }
+  }
+}

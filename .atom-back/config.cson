@@ -1,0 +1,14 @@
+"*":
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+  editor: {}
+  "exception-reporting":
+    userId: "ccd04ffb-e1ab-5d5d-a7fb-f64fe68b98db"
+  "find-and-replace":
+    scrollToResultOnLiveSearch: true
+  welcome:
+    showOnStartup: false

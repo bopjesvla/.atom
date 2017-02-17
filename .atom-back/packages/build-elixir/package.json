@@ -1,0 +1,78 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-11718-14960-sbuu7w/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-11718-14960-sbuu7w/package.tgz",
+        "spec": "/tmp/d-11718-14960-sbuu7w/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-11718-14960-1e6aws4"
+    ]
+  ],
+  "_from": "../d-11718-14960-sbuu7w/package.tgz",
+  "_id": "build-elixir@0.6.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/build-elixir",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-11718-14960-sbuu7w/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-11718-14960-sbuu7w/package.tgz",
+    "spec": "/tmp/d-11718-14960-sbuu7w/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11718-14960-sbuu7w/package.tgz",
+  "_shasum": "93e44c4c712a1a47e76640393e3c3ebeb07cc4f9",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-11718-14960-sbuu7w/package.tgz",
+  "_where": "/tmp/apm-install-dir-11718-14960-1e6aws4",
+  "bugs": {
+    "url": "https://github.com/AtomBuild/atom-build-elixir/issues"
+  },
+  "dependencies": {},
+  "description": "Runs Elixir targets",
+  "devDependencies": {
+    "babel-eslint": "^4.1.5",
+    "eslint": "^1.10.1",
+    "eslint-config-atom-build": "^1.0.0"
+  },
+  "engines": {
+    "atom": "^1.0.0"
+  },
+  "homepage": "https://github.com/AtomBuild/atom-build-elixir#readme",
+  "keywords": [
+    "build",
+    "compile",
+    "elixir",
+    "productivity"
+  ],
+  "license": "MIT",
+  "main": "lib/elixir.js",
+  "name": "build-elixir",
+  "optionalDependencies": {},
+  "providedServices": {
+    "builder": {
+      "description": "Runs elixir targets",
+      "versions": {
+        "2.0.0": "provideBuilder"
+      }
+    }
+  },
+  "readme": "# Elixir compiler for Atom\n[![Build Status](https://travis-ci.org/AtomBuild/atom-build-elixir.svg?branch=master)](https://travis-ci.org/AtomBuild/atom-build-elixir)\n[![Gitter chat](https://badges.gitter.im/noseglid/atom-build.svg)](https://gitter.im/noseglid/atom-build)\n\nUses the [atom-build](https://github.com/noseglid/atom-build) package to build Elixir in the `Atom` editor.\n\nThis package requires [atom-build](https://github.com/noseglid/atom-build) to be installed.\n\nThis packages provides the following targets:\n\n * `Elixir: mix compile`\n * `Elixir: mix compile --warnings-as-errors`\n * `Elixir: mix test`\n * `Elixir: mix clean`\n * `Elixir: mix dialyzer`\n\nIn order to use `Elixir: mix dialyzer` successfully, you will need [dialyxir](https://github.com/jeremyjh/dialyxir) installed, your mix.exs configured to use it.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomBuild/atom-build-elixir.git"
+  },
+  "version": "0.6.0"
+}

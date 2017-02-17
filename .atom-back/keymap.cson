@@ -1,0 +1,4 @@
+'atom-text-editor':
+  'ctrl-i': 'narrow:atom-scan'
+  'alt-a': 'expand-region:expand'
+  'alt-shift-a': 'expand-region:shrink'
